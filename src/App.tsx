@@ -7,6 +7,7 @@ import About from './components/About'
 import WorkProcess from './components/WorkProcess'
 import Faq from './components/Faq'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <WorkProcess/>
       <Faq/>
       <Contact/>
+      <Footer/>
     </>
   )
 }
