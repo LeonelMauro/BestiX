@@ -2,7 +2,7 @@ import { Box, Typography, Button, Container } from "@mui/material";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import heroImage from "../assets/hero-bestix.jpg";
-
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const Hero = () => {
   return (
     <Box
@@ -23,7 +23,8 @@ const Hero = () => {
       minHeight: "100vh",
       display: "flex",
       alignItems: "center",
-      pt: 20,
+      pt: { xs: 12, sm: 14, md: 20 },
+pb: { xs: 6, md: 8 },
     }}
     >
       <Container maxWidth="xl">
@@ -36,12 +37,14 @@ const Hero = () => {
           }}
         >
           {/* TEXTO */}
-          <Box>
+          <Box sx={{
+              pl: { xs: 0, md: 6 },
+              textAlign: { xs: "center", md: "left" },
+            }}>
             <Box
               sx={{
                   display: "inline-flex",
                   alignItems: "center",
-                  ml: { xs: 0, md: 6 },
                   gap: 1,
                   px: 2,
                   py: 0.8,
@@ -74,7 +77,6 @@ const Hero = () => {
             <Typography
               variant="h1"
               sx={{
-                 ml: { xs: 0, md: 6 },
                 color: "#fff",
                 fontWeight: 600,
                 fontSize: { xs: "42px", md: "64px" },
@@ -92,7 +94,6 @@ const Hero = () => {
                 maxWidth: "540px",
                 mb: 4,
                 lineHeight: 1.8,
-                 ml: { xs: 0, md: 6 },
               }}
             >
               En{" "}
@@ -115,7 +116,6 @@ const Hero = () => {
                 alignItems: "center",
                 gap: 2,
                 flexWrap: "wrap",
-                ml: { xs: 0, md: 6 },
               }}
             >
               <Button
@@ -168,20 +168,69 @@ const Hero = () => {
                 WhatsApp
               </Button>
             </Box>
+             {/* BENEFICIOS */}
+            <Box
+              sx={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: { xs: 2, md: 4 },
+                mt: 4,
+                justifyContent: {
+                  xs: "center",
+                  md: "flex-start",
+                },
+              }}
+            >
+              {[
+                "+500 empresas atendidas",
+                "Entrega en 7–15 días",
+                "Atención personalizada",
+              ].map((item) => (
+                <Box
+                  key={item}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <CheckCircleIcon
+                    sx={{
+                      color: "#fcfcfcff",
+                      fontSize: 17,
+                    }}
+                  />
+
+                  <Typography
+                    sx={{
+                      color: "#E5E7EB",
+                      fontSize: "12px",
+                      fontWeight: 500,
+                    }}
+                  >
+                    {item}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
           </Box>
 
           {/* IMAGEN */}
           <Box>
             <Box
-              component="img"
-              src={heroImage}
-              alt="Bestix"
-              sx={{
-                width: "100%",
-                borderRadius: "24px",
-                objectFit: "cover",
-              }}
-            />
+  component="img"
+  src={heroImage}
+  alt="Bestix"
+  sx={{
+    width: "100%",
+    height: {
+      xs: "auto",
+      md: "450px",
+    },
+    borderRadius: "24px",
+    objectFit: "cover",
+  }}
+/>
           </Box>
         </Box>
       </Container>

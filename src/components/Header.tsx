@@ -25,7 +25,7 @@ const Header = () => {
 
   const sections = [
     { id: "service", label: "Servicios" },
-    { id: "como-trabajamos", label: "Procesos" },
+    { id: "work-process", label: "Procesos" },
     { id: "sobre-nosotros", label: "Nosotros" },
     { id: "sobre-nosotros", label: "FAQ" },
   ];

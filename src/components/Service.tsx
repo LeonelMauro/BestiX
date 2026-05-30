@@ -68,12 +68,9 @@ const Services = () => {
           <Typography
             sx={{
               color: "#DF1E25",
-
               fontSize: "14px",
               fontWeight: 600,
-
               letterSpacing: "2px",
-
               mb: 2,
             }}
           >
@@ -111,13 +108,13 @@ const Services = () => {
         </Box>
 
         {/* CARDS */}
-        <Grid container spacing={4}>
+        <Grid container spacing={{ xs: 2, md: 3, lg: 4 }}>
           {services.map((service, index) => (
-            <Grid size={{xs:12, md:6, lg:3}} key={index}>
+            <Grid size={{xs:12, sm:6, lg:3}} key={index}>
               <Box
                 sx={{
                   backgroundColor: "#1F2937",
-                  borderRadius: "24px",
+                  borderRadius: { xs: "18px", md: "24px" },
                   overflow: "hidden",
                   height: "100%",
                   border: "1px solid rgba(255,255,255,0.05)",
