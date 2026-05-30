@@ -5,6 +5,7 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Button,
 } from "@mui/material";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -185,6 +186,86 @@ const Faq = () => {
               </AccordionDetails>
             </Accordion>
           ))}
+        </Box>
+        <Box
+         sx={{
+            mt: {
+               xs: 6,
+               md: 8,
+            },
+            maxWidth: "900px",
+            mx: "auto",
+            borderRadius: {
+               xs: "20px",
+               md: "24px",
+            },
+            background: `
+               radial-gradient(
+               circle at top right,
+               rgba(255,255,255,0.08) 0%,
+               transparent 35%
+               ),
+               #1F2937
+            `,
+            border: "1px solid rgba(255,255,255,0.06)",
+            p: {
+               xs: 3,
+               md: 5,
+            },
+            textAlign: "center",
+         }}
+         >
+        <Typography
+         sx={{
+            color: "#FFFFFF",
+            fontWeight: 700,
+            fontSize: {
+               xs: "1.8rem",
+               md: "2.4rem",
+            },
+            lineHeight: 1.1,
+            mb: 2,
+         }}
+         >
+         ¿Listo para vestir a tu equipo?
+         </Typography>
+
+        <Typography
+            sx={{
+               color: "#D1D5DB",
+               maxWidth: "600px",
+               mx: "auto",
+               fontSize: {
+                  xs: "14px",
+                  md: "16px",
+               },
+               lineHeight: 1.7,
+               mb: 3,
+            }}
+            >
+            Respondé un breve formulario y en menos de 24 horas
+            tendrás tu presupuesto sin compromiso.
+            </Typography>
+        <Button
+            component="a"
+            href="#contact"
+            variant="contained"
+            sx={{
+               backgroundColor: "#DF1E25",
+               borderRadius: "999px",
+               px: 4,
+               py: 1.3,
+               fontSize: "15px",
+               fontWeight: 600,
+               textTransform: "none",
+
+               "&:hover": {
+                  backgroundColor: "#c81920",
+               },
+            }}
+            >
+            Solicitar presupuesto
+            </Button>
         </Box>
       </Container>
     </Box>

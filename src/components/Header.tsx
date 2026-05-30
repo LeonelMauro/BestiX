@@ -148,24 +148,31 @@ const Header = () => {
 
             {/* BOTÓN */}
             <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "#DF1E25",
-                borderRadius: "999px",
-                px: 3,
-                py: 1,
-                textTransform: "none",
-                fontWeight: 400,
-                boxShadow: "none",
+  variant="contained"
+  onClick={() => {
+    const el = document.getElementById("contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  sx={{
+    backgroundColor: "#DF1E25",
+    borderRadius: "12px", // antes 999px (muy redondo)
+    px: 2, // más chico
+    py: 0.8, // más chico
+    fontSize: "0.85rem", // opcional: reduce tamaño de texto
+    textTransform: "none",
+    fontWeight: 500,
+    boxShadow: "none",
 
-                "&:hover": {
-                  backgroundColor: "#b91c1c",
-                  boxShadow: "none",
-                },
-              }}
-            >
-              Pedir presupuesto
-            </Button>
+    "&:hover": {
+      backgroundColor: "#b91c1c",
+      boxShadow: "none",
+    },
+  }}
+>
+  Pedir presupuesto
+</Button>
           </Box>
         )}
       </Toolbar>

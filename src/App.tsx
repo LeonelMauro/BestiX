@@ -6,6 +6,7 @@ import './App.css'
 import About from './components/About'
 import WorkProcess from './components/WorkProcess'
 import Faq from './components/Faq'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <About/>
       <WorkProcess/>
       <Faq/>
+      <Contact/>
     </>
   )
 }
