@@ -5,6 +5,7 @@ import TrustedCompanies from './components/TrustedCompanies'
 import './App.css'
 import About from './components/About'
 import WorkProcess from './components/WorkProcess'
+import Faq from './components/Faq'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Service/>
       <About/>
       <WorkProcess/>
+      <Faq/>
     </>
   )
 }

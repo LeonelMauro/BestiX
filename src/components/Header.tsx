@@ -27,7 +27,7 @@ const Header = () => {
     { id: "service", label: "Servicios" },
     { id: "work-process", label: "Procesos" },
     { id: "sobre-nosotros", label: "Nosotros" },
-    { id: "sobre-nosotros", label: "FAQ" },
+    { id: "faq", label: "FAQ" },
   ];
 
   return (
